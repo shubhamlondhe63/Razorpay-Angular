@@ -1,0 +1,12 @@
+<h2 class="checkout-title">Checkout</h2>
+<div class="cart-container">
+  <div class="cart-item" *ngFor="let item of cartItems">
+    <p class="item-name">{{ item.product.name }}</p>
+    <p class="item-price">${{ item.product.price }}</p>
+    <p class="item-quantity">Quantity: {{ item.quantity }}</p>
+  </div>
+  <div class="cart-total">
+    <h3>Total Amount: ${{ totalAmount }}</h3>
+  </div>
+</div>
+<button class="proceed-btn" (click)="checkout()">Proceed to Payment</button>
